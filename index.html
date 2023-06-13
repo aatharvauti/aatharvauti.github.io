@@ -34,13 +34,19 @@
     <!-- Import Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     
     <style>
     
         body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Roboto', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             color: black;
+            background-color: white;
+            padding: 0 30px;
+            -webkit-user-select: none; /* For Safari */
+            -moz-user-select: none; /* For Firefox */
+            -ms-user-select: none; /* For Internet Explorer/Edge */
+            user-select: none; /* Standard syntax */
         }
     
         h1, h2, h3, h4 {
@@ -70,14 +76,24 @@
         }
 
         a {
+            color: #337ab7; /* Link color */
             text-decoration: none;
-            transition: color 0.3s ease;
+            position: relative; /* Required for pseudo-element positioning */
         }
-        
-        a:hover {
-            color: #337ab7;
-            text-decoration: underline;
-            transition: color 0.3s ease;
+
+        a::before {
+            content: '';
+            position: absolute;
+            bottom: -2px; /* Adjust the distance from the text */
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: #337ab7; /* Underline color */
+            transition: width 0.3s ease; /* Smooth transition for width change */
+        }
+
+        a:hover::before {
+            width: 100%; /* Full width on hover */
         }
     
     </style>
@@ -88,33 +104,36 @@
 
 <body>
 
-    <h1>Hello World! I am Atharva Auti</h1>
+    <h1>Hello, World! <br> I am Atharva Auti</h1>
 
     <h2>I bought this domain, it looked cool!</h2>
 
-    <h3>If you're wondering... I don't like CSS</h3>
+    <p>(And incase if you're wondering... I don't like CSS)</p>
 
-    <h4>Where do I work?</h4>
-    <a href="https://cyhex.co" target="_blank">Co-Founder and Director @CyHEX</a>
+    <h3><b>Where do I work?</b></h3>
+    Co-Founder and Director <a href="https://cyhex.co" target="_blank">@CyHEX</a>
 
-    <h4>Wanna Send a Message?</h4>
+    <h3><b>Wanna Send a Message?</b></h3>
     <ul>
         <li><a href="mailto:hi@auti.dev">hi@auti.dev</a></li>
         <li><a href="mailto:auti@cyhex.co">auti@cyhex.co</a></li>
         <li><a href="auti.pub" target="_blank">PGP Public Key</a></li>
+        <br>
+        <li><a href="https://discordapp.com/channels/@me/631478564411146262/" target="_blank">auti#7994</a></li>
+        <li><a href="https://t.me/aatharvauti" target="_blank">Telegram</a></li>
+        <li><a href="https://wa.me/+918452861970" target="_blank">Whatsapp Business</a></li>
     </ul>  
 
-    <h4>Check out my socials!</h4>
+    <h3><b>Check out my socials!</b></h3>
     <ul>
         <li><a href="https://github.com/aatharvauti" target="_blank">GitHub</a></li>
+        <li><a href="https://linkedin.com/in/auti" target="_blank">LinkedIn</a></li>
         <li><a href="https://twitter.com/aatharvauti" target="_blank">Twitter</a></li>
         <li><a href="https://instagram.com/aatharvauti" target="_blank">Instagram</a></li>
-        <li><a href="https://linkedin.com/in/auti" target="_blank">LinkedIn</a></li>
-        <li><a href="https://wa.me/+918452861970" target="_blank">Whatsapp (Business Only)</a></li>
     </ul>
     
-    <h4>Official Payments</h4>
-    <ul>
+    <h3><b>Official Payments</b></h3>
+    <ul style="margin-bottom: 100px;">
         <li><a href="upi://pay?pa=auti@kotak" target="_blank">Unified Payments Interface</a></li>
         <li><a href="https://paypal.me/aatharvauti" target="_blank">Paypal</a></li>
     </ul>
