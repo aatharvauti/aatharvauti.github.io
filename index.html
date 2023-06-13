@@ -41,7 +41,7 @@
         body {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Roboto', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             color: black;
-            background-color: white;
+            background-color: #fffbfb;
             padding: 0 30px;
             -webkit-user-select: none; /* For Safari */
             -moz-user-select: none; /* For Firefox */
@@ -76,22 +76,27 @@
         }
 
         a {
-            color: #337ab7; /* Link color */
+            color: rgba(230, 52, 52, 0.75);
             text-decoration: none;
-            position: relative; /* Required for pseudo-element positioning */
+            position: relative;
+            transition: width 0.5s ease;
         }
 
         a::before {
             content: '';
             position: absolute;
-            bottom: -2px; /* Adjust the distance from the text */
+            bottom: -2px;
             left: 0;
             width: 0;
             height: 1px;
-            background-color: #337ab7; /* Underline color */
-            transition: width 0.3s ease; /* Smooth transition for width change */
+            background-color: rgb(230, 52, 52);
+            transition: width 0.5s ease;
         }
 
+        a:hover {
+            color: rgba(230, 52, 52, 1);
+            transition: width 0.5s ease;
+        }
         a:hover::before {
             width: 100%; /* Full width on hover */
         }
