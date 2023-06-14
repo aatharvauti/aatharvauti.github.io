@@ -100,6 +100,28 @@
         a:hover::before {
             width: 100%; /* Full width on hover */
         }
+
+        /* Styles for PC monitors */
+        @media screen and (min-width: 1024px) {
+            body {
+                padding: 0 275px;
+            }
+            
+        }
+
+        /* Styles for iPads and tablets */
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            body {
+                padding: 0 100px;
+            }
+        }
+
+        /* Styles for mobile phones */
+        @media screen and (max-width: 767px) {
+            body {
+                padding: 0 35px;
+            }
+        }
     
     </style>
 
